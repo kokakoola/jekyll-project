@@ -1,0 +1,17 @@
+---
+layout : blog
+title : Heroku
+category : how-to
+tags : [heroku, deployment, tools]
+description : Heroku basics
+comments : true
+lang : estonian
+excerpt : Heroku on koht, kus Railsi hostida. Algajale tasuta. Kiire ja ilus, üle käsurea ja giti hallatav.
+
+---
+
+`$ heroku logs --tail` - jooksev heroku postgresi logi  
+`$ heroku open` - ava oma heroku app brauseris
+`$ heroku addons | grep POSTGRES` - kas appil on andmebaas juba küljes
+
+

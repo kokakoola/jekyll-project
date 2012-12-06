@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>  Markdown |  Mare Hunt</title>
+	<meta name="description" content= "Simplified html for fast writing">
+	<meta name="author" content="Mare Hunt">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../stylesheets/base.css">
+	<link rel="stylesheet" href="../../stylesheets/skeleton.css">
+	<link rel="stylesheet" href="../../stylesheets/layout.css">
+	<link rel="stylesheet" href="../../stylesheets/blog.css">
+	
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+<div class="top-bar"></div>
+<div class="nav2">
+	<ul>
+		<li><a href="#about">About</a></li>		
+		<li><a href="#services">Services</a></li>
+		<li><a href="#work">Portfolio</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#blog">Blog</a></li>
+	</ul>
+</div> <!-- end nav2 -->
+	
+	<div id="about">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2><img src="/images/star.png" alt="" /> Markdown <img src="/images/star.png" alt="" /></h2>
+				
+			</div> <!-- end sixteen columns -->		
+			
+			<div class="twelve columns">
+				<p class="under">
+					Posted on December  1, 2012
+					 in category  "how-to"  
+				</p>
+
+				<p class="intro"> Mulle on alati tundunud nüri nii wysiwyg-i (kirjutab räpakat htmli ja on üldse puine) kui puhta htmli kasutamine tekstiloomeks. Hah, aga on ju olemas Markdown! </p>
+			
+				<p> <p><a href="http://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a> on geniaalselt lihtsa <a href="http://markable.in/file/aa191728-9dc7-11e1-91c7-984be164924a/&quot;Syntax&quot;">süntaksiga</a> tekstiprotokoll, mis brauserisse eksportides lisab tarvilised html-tagid ja css-i ning näeb vaevata ilus välja. Pluss veel <em>syntax hilight</em> koodi kirjutamise jaoks (põhjus, miks mu Tumblri blogi ei saanudki tööle). Github ja Stackoverflow on üleni markdowni peal nt ja muidugi ka praegune jutt siin.</p>
+
+<p><a href="http://www.sublimetext.com/2/&quot;STL2&quot;">Sublime Text</a> (mu uus tore tekstieditor, tasuline, aga vaba testimiseks, selle seadetest hiljem) toetab markdowni ja lisades pisikse plugina ( <a href="https://github.com/revolunet/sublimetext-markdown-preview/">Markdown Preview</a> - kasuta installimiseks <a href="https://github.com/revolunet/sublimetext-markdown-preview">Package Controli</a> - nagunii tarvilik lisand STL2 timmimiseks) võimaldab tulemit brauseris testida. <code>Shift Ctrl P</code> annab pluginavaliku akna, sealt sisesta <code>Ma..</code> ja vali  <code>Preview in Browser</code>. . Või lisa uus <a href="http://stackoverflow.com/questions/12965615/sublime-text-2-mac-markdown-preview-keybinding"><em>key binding</em></a>. </p>
+
+<p><sub><sup>Kui süsteem on seatud avama htmli vaikimisi tekstieditoris, tuleb seadistada faili Packages/Markdown/Markdown Preview/ MarkdownPreview.sublime-settings ja asendada “browser”: “default” oma brauseriga, nt “browser”: “/Applications/Google Chrome.app” - muidu avaneb html tekstieditoris <em>raw</em> htmlina.</sup></sub></p>
+
+<p>.md .htmliks konvertimiseks on Package Controlil “Open in Sublime”, samas on ka md cheatsheet. </p>
+
+<p>Mida ma pole veel välja mõelnud on kuidas pääseda sellest keyboardide lakkamatust vahetamisest eesti-US vahel - aga see probleem on ka htmlis nagunii.</p>
+
+<p>Markdowni kujundamiseks on veebis leitavad paar <a href="https://github.com/jasonm23/markdown-css-themes">css</a>, mida saab ülalnimetet settingute failis seada.</p>
+
+<p>Kui Sublimet veel vuntsida <a href="https://github.com/dz0ny/LiveReload-sublimetext2">Live Reloadiga</a>, saad eriti paindliku töörista.</p>
+
+<p>Igatahes - Markdown on cool ja veider, et ma teda varem üles pole leidnud. Järgmisena kavatsen <a href="http://octopress.org/">Octopressi</a> avastada - blogimisplatform koodijatele. Ja <a href="https://github.com/mojombo/jekyll">Jekyll</a>? Ja <a href="http://cloudhead.io/toto">toto</a>? Kui leian põhjuse, miks mitte <em>raw</em> .md faile üles riputada. Vbl tagimiseks, et sisu oleks paremini leitav? Kommenteerimiseks? Ei, mitte eesti keeles.</p>
+
+<div class="last_tweets">
+	Markdowni saab htmli sisse kirjutada (kui markdowni tagidest puudu jääb või html-entities mängu tuleb. Nt Underscore annab vea ja tuleb lisada kui "&#95;". "Small" puudub markdownis.
+	
+</div>
+ </p>
+
+				<div class="tags">
+                    <i class="icon-tags"></i>  <a href="/tags/markdown" title="View posts tagged with &quot;markdown&quot;"><u>markdown</u></a>   
+                 </div>
+			</div> <!-- twelve columns -->
+			
+
+<div class="four columns">
+	<img src="/images/ma_ka.jpg" alt="" />
+	<div class="last_tweets">
+		<div id="twitter_update_list">
+			It's more a conspect than a blog. I'm glad if you find it useful. But don't be mad at me - the language is whatever it feels right at the moment. The snippets in Terminal window are marked with $.
+		</div>
+	</div> <!-- end last_tweets -->
+</div> <!-- end four columns -->			
+
+			
+			<div class="four columns">
+			</br>
+			
+			<hr />
+			<p>Viimased postitused</p>
+						
+						<ul>	
+    <li><a href="/blog/html-ja-css">HTML ja CSS</a> <br />
+    <small>December  2, 2012, category    <a href="http://erjjones.github.com/blog/html-ja-css#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/markdown">Markdown</a> <br />
+    <small>December  1, 2012, category  how-to  <a href="http://erjjones.github.com/blog/markdown#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/sea-ules-rails">Sea korda Railsi arenduskeskkond</a> <br />
+    <small>November 29, 2012, category  how-to  <a href="http://erjjones.github.com/blog/sea-ules-rails#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/Jekylli-paigaldamine">Staatiline blogi Jekylliga</a> <br />
+    <small>November 29, 2012, category  how-to  <a href="http://erjjones.github.com/blog/Jekylli-paigaldamine#disqus_thread"></a></small></li>	
+    </ul>		
+
+			</div>
+			
+			<div class="four columns">
+			</br>		
+			<hr />
+			<p>Tagid</p>
+				    		
+				        <span><a href="/tags/jekyll">jekyll</a>, </span>
+				    		
+				        <span><a href="/tags/sites">sites</a>, </span>
+				    		
+				        <span><a href="/tags/projects">projects</a>, </span>
+				    		
+				        <span><a href="/tags/Rails">Rails</a>, </span>
+				    		
+				        <span><a href="/tags/Development">Development</a>, </span>
+				    		
+				        <span><a href="/tags/Setup">Setup</a>, </span>
+				    		
+				        <span><a href="/tags/markdown">markdown</a>, </span>
+				    
+			</div>			
+	  		
+			<div class="clear"></div>
+			
+		</div> <!-- end container -->
+	</div> <!-- end about -->
+	
+		<div class="dotted-bar2">
+			<a href="#"><span class="top"></span></a>
+		</div>	
+	
+	<div class="testimonial">
+			<div class="container">
+				<div class="sixteen columns">
+					<p>Related posts
+					<ul>
+    					
+      					<li><span>02 Dec 2012</span> <a href="/blog/html-ja-css">HTML ja CSS</a></li>
+					    
+      					<li><span>29 Nov 2012</span> <a href="/blog/sea-ules-rails">Sea korda Railsi arenduskeskkond</a></li>
+					    
+      					<li><span>29 Nov 2012</span> <a href="/blog/Jekylli-paigaldamine">Staatiline blogi Jekylliga</a></li>
+					    
+					</ul>
+  					</p>
+				</div> <!-- end sixteen columns -->
+			</div> <!-- end container -->
+		</div> <!-- end testimonial -->
+
+			
+		<div class="copyright">
+			<p>&copy; 2012 All rights reserved</p>
+		</div> <!-- end copyright -->
+
+	
+	
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="../javascripts/smooth-scroll.js" type="text/javascript"></script>
+	<script src="../javascripts/smooth-scroll-ios.js" type="text/javascript"></script> 	
+<!-- End Document
+================================================== -->
+</body>
+</html>

@@ -1,0 +1,1 @@
+rsync -arvuz  --delete --rsh=ssh  /Users/Mare/rails_projects/marehunt/blog/_site/. mare@erik.server.co.ee:www/seldon.era.ee/htdocs/marehunt/blog/

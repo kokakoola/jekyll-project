@@ -1,0 +1,114 @@
+/*
+* Jekyll blog theme
+* Mare Hunt
+* Free to use under the MIT license.
+* 11/30/2012
+*/
+
+
+/* Table of Content
+==================================================
+	#Code
+	#Print
+
+/* #Layout
+================================================== */
+.intro {
+  font-style: italic;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 80px;
+}
+
+h3 { 
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+h3 a { text-decoration: none; 
+}
+
+.under { font-size: 12px; }
+
+/* #Code
+================================================== */
+
+code,
+fuelux pre {
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  /*background-color: #f7f7f9;*/
+  background: transparent url(../images/dotted-bg2.png) repeat;
+  border: 0px solid #e1e1e8;
+}
+
+pre {
+  display: block;
+  padding: 20px!important;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background: url(../images/dotted-bg2.png) repeat;
+  /*background-color: #f5f5f5;*/
+  border: 0px solid #ccc;
+  border: 0px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+pre.prettyprint {
+  margin-bottom: 20px;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+/* #Print
+================================================== */
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

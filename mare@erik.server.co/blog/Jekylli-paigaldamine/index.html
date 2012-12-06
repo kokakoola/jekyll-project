@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>  Staatiline blogi Jekylliga |  Mare Hunt</title>
+	<meta name="description" content= "Building a dynamically generated static site">
+	<meta name="author" content="Mare Hunt">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../stylesheets/base.css">
+	<link rel="stylesheet" href="../../stylesheets/skeleton.css">
+	<link rel="stylesheet" href="../../stylesheets/layout.css">
+	<link rel="stylesheet" href="../../stylesheets/blog.css">
+	
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+<div class="top-bar"></div>
+<div class="nav2">
+	<ul>
+		<li><a href="#about">About</a></li>		
+		<li><a href="#services">Services</a></li>
+		<li><a href="#work">Portfolio</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#blog">Blog</a></li>
+	</ul>
+</div> <!-- end nav2 -->
+	
+	<div id="about">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2><img src="/images/star.png" alt="" /> Staatiline blogi Jekylliga <img src="/images/star.png" alt="" /></h2>
+				
+			</div> <!-- end sixteen columns -->		
+			
+			<div class="twelve columns">
+				<p class="under">
+					Posted on November 29, 2012
+					 in category  "how-to"  
+				</p>
+
+				<p class="intro"> Tekstiblogi Wordpressi peal on nagu kopaga peenra rohimine. Tahan staatilist markdownis kirjutatud blogi. Ilma andmebaasi, kasutajaliidese jmt tarbetu kraamita ühe tõesti lihtsa tekstiblogi kohta. Ilma liigsete iluvidinateta nagu etteantud css ja github hosting. Kiiret, ühe näpuliigutusega uuendatavat. Standardse blogistruktuuriga (tagid, kategooriad, arhiiv). </p>
+			
+				<p> <p>Selleks jäi siis <a href="https://github.com/mojombo/jekyll">Jekyll</a> - blogiplatform häkkereile. Kellel pole lusti kujunduse ja layoudiga jännata saab võtta Jekylli edasiarenduse <a href="http://octopress.org/">Octopress</a>, veel on samast perekonnast eelkujundatud <a href="http://jekyllbootstrap.com/">jekyll bootstrap</a> ja <a href="http://ruhoh.com/">ruhoh</a> on jekylli edasiarendus aga et autor, Jade Dominguez, läks tööle umbes peale seda, pole see vast nii turvaliselt lõpuni ehitatud. </p>
+
+<p>Kõige lihtsam viis on nimetet bootstrap ja vaba hosting <a href="http://pages.github.com/">github pages</a>. Viimase korral pole muud viga kui et pluginaid ei saa turvakaalutlustel tarvitada. Siinkirjeldatav on juht, kui tarvitusel on puhas jekyll ja hosting on oma serveris. Jekyll on Railsil baseeruv blogividin, seega Rails masinas on eelduseks selle kasutamiseks.</p>
+
+<h3 id="kigepealt-lokaalne-install">Kõigepealt lokaalne install:</h3>
+
+<ul>
+  <li>
+    <p><code>$ install jekyll</code> </p>
+  </li>
+  <li>
+    <p>lood <a href="http://ostatic.com/blog/build-your-site-with-jekyll">kataloogistruktuuri</a> (_config tuleb võtta jekylli githubi lehelt - see on vana postitus ja aeg on edasi läinud, aga aitab alustada. Ametlik <a href="https://github.com/mojombo/jekyll/wiki/Usage">wiki</a> tundub alguses keerukas. Kui tahad, et :4000 peal otse jookseks, kommenteeri välja baseurl.)</p>
+  </li>
+  <li>
+    <p><code>$ jekyll --server --auto</code> 
+ <code>--server</code> käivitab väikese lokaalse serveri <code>--auto</code> võimaldab lehtede automaatset värskendust ja on mugav. Kui sa “autot” ei kasuta, loob käsk <code>jekyll</code> staatilise sisuga _site kataloogi, mida su veebileht blogina näitama hakkab. </p>
+  </li>
+  <li>
+    <p>ja voila! localhost:4000 peal on su leht.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><a href="https://github.com/mojombo/jekyll/wiki/plugins">Jekylli pluginad</a>
+<a href="http://dseifried.wordpress.com/2011/11/25/jekyll-yaml-front-matter-and-the-liquid-templating-system/">Jekyll sorteerib kategooriaid</a></p>
+</blockquote>
+
+<h3 id="teine-pev">Teine päev</h3>
+<p>Ma hakkan vaikselt aru saama…</p>
+
+<p>Jekylli kataloogistruktuur on lihtne. Sulle sobivas juurkataloogis peavad asuma:<br />
+	 - index.html  (tavaline index)<br />
+	 - archive.html  (tavaline arhiiv)<br />
+	 - _config.yml  (seaded)<br />
+	 - _layouts dir  (erinevad layoudid eri lehtedele)<br />
+	 - _posts dir  (sinu postitused)  </p>
+
+<p>Kui kataloogistruktuur on paigas (ja _posts dir-i sees on su postitused), siis jooksutades 
+terminalis käsku <code>jekyll</code> (muidugi pead sa asuma samal ajal oma juurkataloogis), teeb jekyll juurkataloogi uue diri: _site. See on valmis blogi ja kui selle enda serverisse üles riputad, ongi kõik. Kui seda lähemalt uurid, leiad sealt oma postistused korralikult kuupäevakataloogidesse sorteerituna ja puhta html-i kujul [^1]. </p>
+
+<p>Lokaalis näed seda siis Localhost:4000 peal kui oled jekylli serveri käivitanud käsuga <code>jekyll --server --auto</code>. Alakriipsuga nimetused seepärast, et see on välitsus: kõik mitte-alakriipsuga asjad kopeerib jekyll _site kataloogi.</p>
+
+<p>Eriti coole nippe jekylli kustomiseerimiseks (osalt pärit <a href="http://www.kinnetica.com/2011/04/17/jekyll-tips-and-tricks/">siit</a>):
+- YAML Front Matter on see asi, mis iga blogilehe algusse kirjutatakse. YAML kasutab <code>key : value</code> süntaksit. Nii saad oma template sisse kirjutada endaloodud muutujaid nagu nt metaandmeid, kategooriaid, tage. Nt käesoleva lehe alguses seisab YAML:</p>
+
+<pre><code>---
+layout : blog
+title : Jekylli paigaldamine
+categories : how-to  
+tags :
+- jekyll
+- sites
+- projects
+description : Building a dynamically generated static site
+comments : true
+published : true
+sidebar : Tahan staatilist blogi. Ilma liigsete iluvidinateta nagu etteantud css ja github hosting, sest see peab olema loogiline lisa olemasolevale lehele.Ilma sqli, cache jmt tarbetu kraamita ühe tõesti lihtsa tekstiblogi kohta. Kiiret, üle giti hallatavat. Standardse blogistruktuuriga.
+---
+</code></pre>
+
+<p>Ja et ühte <code>value</code> neist välja kutsuda, tuleb template sulle vajaliku koha peale kirjutada {{ key }}. Nt {{ description }} annab teksti “Building a dynamically generated static site” </p>
+
+<p>Niisamuti saab lisada pilte: lisa YAML front matterisse <code>image: /img/wing.jpg</code> ja kutsu templates sobivas kohas välja {{  page.image }}</p>
+
+<p>Postituse nimi peab olema kindla struktuuriga: year-month-day-title.md </p>
+
+<p>Kui kirjatükk on draft, piisab kui YAMLis panna published : false. Või luua juurkataloogi kataloog drafts ja paigutada postitus sinna.</p>
+
+<p>scripts/ kataloogis käib üleslaadimisskript. _config.yml ignoreerib nii nii draft/ kui script/ kataloogi.</p>
+
+<p>Rohkem pole vaja jutustada: leidsin ammendava juhendi, loe parem <a href="http://erjjones.github.com/blog/How-I-built-my-blog-in-one-day/">seda</a> (koosneb 2 osast, tagide plugin on teises)</p>
+
+<div class="last_tweets">
+[^1]: Jekyll kasutab vaikimisi markdowni konverterina Marukut, seda saab vahetada. Maruku annab sulle ka jooksvalt teada su markdowni _syntax erroritest_. Nt kui kasutad mõnda markdowni poolt hõivatud tagi tekstis. Siis tuleb see [html-entitiga](http://maruku.rubyforge.org/entity_test.html) asendada
+</div>
+ </p>
+
+				<div class="tags">
+                    <i class="icon-tags"></i>  <a href="/tags/jekyll" title="View posts tagged with &quot;jekyll&quot;"><u>jekyll</u></a>     <a href="/tags/sites" title="View posts tagged with &quot;sites&quot;"><u>sites</u></a>     <a href="/tags/projects" title="View posts tagged with &quot;projects&quot;"><u>projects</u></a>   
+                 </div>
+			</div> <!-- twelve columns -->
+			
+
+<div class="four columns">
+	<img src="/images/ma_ka.jpg" alt="" />
+	<div class="last_tweets">
+		<div id="twitter_update_list">
+			It's more a conspect than a blog. I'm glad if you find it useful. But don't be mad at me - the language is whatever it feels right at the moment. The snippets in Terminal window are marked with $.
+		</div>
+	</div> <!-- end last_tweets -->
+</div> <!-- end four columns -->			
+
+			
+			<div class="four columns">
+			</br>
+			
+			<hr />
+			<p>Viimased postitused</p>
+						
+						<ul>	
+    <li><a href="/blog/html-ja-css">HTML ja CSS</a> <br />
+    <small>December  2, 2012, category    <a href="http://erjjones.github.com/blog/html-ja-css#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/markdown">Markdown</a> <br />
+    <small>December  1, 2012, category  how-to  <a href="http://erjjones.github.com/blog/markdown#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/sea-ules-rails">Sea korda Railsi arenduskeskkond</a> <br />
+    <small>November 29, 2012, category  how-to  <a href="http://erjjones.github.com/blog/sea-ules-rails#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/Jekylli-paigaldamine">Staatiline blogi Jekylliga</a> <br />
+    <small>November 29, 2012, category  how-to  <a href="http://erjjones.github.com/blog/Jekylli-paigaldamine#disqus_thread"></a></small></li>	
+    </ul>		
+
+			</div>
+			
+			<div class="four columns">
+			</br>		
+			<hr />
+			<p>Tagid</p>
+				    		
+				        <span><a href="/tags/jekyll">jekyll</a>, </span>
+				    		
+				        <span><a href="/tags/sites">sites</a>, </span>
+				    		
+				        <span><a href="/tags/projects">projects</a>, </span>
+				    		
+				        <span><a href="/tags/Rails">Rails</a>, </span>
+				    		
+				        <span><a href="/tags/Development">Development</a>, </span>
+				    		
+				        <span><a href="/tags/Setup">Setup</a>, </span>
+				    		
+				        <span><a href="/tags/markdown">markdown</a>, </span>
+				    
+			</div>			
+	  		
+			<div class="clear"></div>
+			
+		</div> <!-- end container -->
+	</div> <!-- end about -->
+	
+		<div class="dotted-bar2">
+			<a href="#"><span class="top"></span></a>
+		</div>	
+	
+	<div class="testimonial">
+			<div class="container">
+				<div class="sixteen columns">
+					<p>Related posts
+					<ul>
+    					
+      					<li><span>02 Dec 2012</span> <a href="/blog/html-ja-css">HTML ja CSS</a></li>
+					    
+      					<li><span>01 Dec 2012</span> <a href="/blog/markdown">Markdown</a></li>
+					    
+      					<li><span>29 Nov 2012</span> <a href="/blog/sea-ules-rails">Sea korda Railsi arenduskeskkond</a></li>
+					    
+					</ul>
+  					</p>
+				</div> <!-- end sixteen columns -->
+			</div> <!-- end container -->
+		</div> <!-- end testimonial -->
+
+			
+		<div class="copyright">
+			<p>&copy; 2012 All rights reserved</p>
+		</div> <!-- end copyright -->
+
+	
+	
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="../javascripts/smooth-scroll.js" type="text/javascript"></script>
+	<script src="../javascripts/smooth-scroll-ios.js" type="text/javascript"></script> 	
+<!-- End Document
+================================================== -->
+</body>
+</html>

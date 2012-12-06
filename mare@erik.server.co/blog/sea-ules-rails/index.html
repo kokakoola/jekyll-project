@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>  Sea korda Railsi arenduskeskkond |  Mare Hunt</title>
+	<meta name="description" content= "Set up Rails Development Enviroment OSX 10.6.8">
+	<meta name="author" content="Mare Hunt">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../stylesheets/base.css">
+	<link rel="stylesheet" href="../../stylesheets/skeleton.css">
+	<link rel="stylesheet" href="../../stylesheets/layout.css">
+	<link rel="stylesheet" href="../../stylesheets/blog.css">
+	
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+<div class="top-bar"></div>
+<div class="nav2">
+	<ul>
+		<li><a href="#about">About</a></li>		
+		<li><a href="#services">Services</a></li>
+		<li><a href="#work">Portfolio</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#blog">Blog</a></li>
+	</ul>
+</div> <!-- end nav2 -->
+	
+	<div id="about">
+		<div class="container">
+		
+			<div class="sixteen columns">
+				<h2><img src="/images/star.png" alt="" /> Sea korda Railsi arenduskeskkond <img src="/images/star.png" alt="" /></h2>
+				
+			</div> <!-- end sixteen columns -->		
+			
+			<div class="twelve columns">
+				<p class="under">
+					Posted on November 29, 2012
+					 in category  "how-to"  
+				</p>
+
+				<p class="intro"> Enne kui ma PÄRISELT unustan, olgu kirja pandud - järgmise süsteemivahetuse puhuks. Probleem - Leopardilt Snow peale üle minnes enam uut Ruby äppi luua ei saanud. Bundle install andis jsoni gemi juures vea ja kogu muusika. </p>
+			
+				<p> <p><code>$ cat /Users/Mare/.rvm/log/ruby-1.9.3-p327/configure.log</code> annab inetu tulemuse. </p>
+
+<p>Lahendus (aitäh, Janika Liiv, Mihkel Sokk, Google ja Stackoverflow):</p>
+
+<ol>
+  <li>
+    <p>Viska ära oma vana, tarbetuks muutunud Xcode - see ei tööta uue süsteemi peal.Pealegi on sellest Railsi jooksutamiseks vaja ainlt GCC-d, mis on saadaval eraldi ja kordi väiksem kui terve Xcode. Kui sul mingil põhjusel on vahepeal kaotsi läinud uninstall script (nagu mul), siis lae alla toimiv 3.x (vist oli 3.2) Xcode ja kasuta selle unistalli - võtab maha kogu varasema Xcode. Alates Xcode 4-st piisab (väidetavalt) Developer kataloogi ära viskamisest, varasemate versioonide korral on failid üle kogu kõvaketta laiali ja kataloogi äraviskamine ei vabasta sind KOGU Xcodest.<br />
+<code>$ sudo /Developer/Library/uninstall-devtools –mode=all</code> </p>
+  </li>
+  <li>
+    <p><a href="http://www.mkoby.com/2011/06/03/completely-removing-rvm/">Viska ära oma rvm</a> koos selle peal jooksva Rubyga</p>
+  </li>
+  <li>
+    <p>Installi GCC Package.<br />
+ <code>$ wich gcc</code> – näitab gcc asukohta<br />
+ <code>$ gcc</code> -v – näitab versiooni  </p>
+  </li>
+  <li>
+    <p>Installi Homebrew (<code>/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)</code> või <code>ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"</code>)<br />
+ Brew help:<br />
+ <code>$ man brew</code> ja <code>$ brew home</code></p>
+  </li>
+  <li>
+    <p>Jooksuta Terminalis brew doctor ja järgi selle juhtnööre ülejäänud tarbetute, mõttetute ja kahtlaste failide eemaldamiseks, mida homebrew leiab.
+Minu korral nt <br />
+ <code>$ rm -rf /usr/local/lib/libsqlite3.la</code><br />
+ <code>$ rm -rf /usr/local/lib/pkgconfig/sqlite3.pc</code><br />
+ <code>$ rm -rf /usr/local/lib/libsqlite3.a</code><br />
+ <code>$ rm -rf /usr/local/lib/libsqlite3.0.8.6.dylib</code>  </p>
+  </li>
+  <li>
+    <p><a href="http://ryanbigg.com/2011/06/mac-os-x-ruby-rvm-rails-and-you/">Installi rvm</a> ja jälgi ka rvmi antavaid seadistusjuhiseid (siin ka üks <a href="http://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/">dummy-juhend</a> mida ma küll ei kasutanud)</p>
+  </li>
+  <li>
+    <p>Installi rvmi peale Ruby: <br />
+ <code>$ rvm requirements</code><br />
+ <code>$ rvm install 1.9.3</code>  </p>
+  </li>
+</ol>
+
+<p>Homebrew on kullatükk, mis aitab Pathi puhtana hoida ja kõike muud tarvilikku installida (nt git kui sa veel ei kasuta)</p>
+
+<p>Edasi võid nautida <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">Hartli Ruby on Rails tutoriali</a> ilma liigse peavaluta. </p>
+ </p>
+
+				<div class="tags">
+                    <i class="icon-tags"></i>  <a href="/tags/Rails" title="View posts tagged with &quot;Rails&quot;"><u>Rails</u></a>     <a href="/tags/Development" title="View posts tagged with &quot;Development&quot;"><u>Development</u></a>     <a href="/tags/Setup" title="View posts tagged with &quot;Setup&quot;"><u>Setup</u></a>   
+                 </div>
+			</div> <!-- twelve columns -->
+			
+
+<div class="four columns">
+	<img src="/images/ma_ka.jpg" alt="" />
+	<div class="last_tweets">
+		<div id="twitter_update_list">
+			It's more a conspect than a blog. I'm glad if you find it useful. But don't be mad at me - the language is whatever it feels right at the moment. The snippets in Terminal window are marked with $.
+		</div>
+	</div> <!-- end last_tweets -->
+</div> <!-- end four columns -->			
+
+			
+			<div class="four columns">
+			</br>
+			
+			<hr />
+			<p>Viimased postitused</p>
+						
+						<ul>	
+    <li><a href="/blog/html-ja-css">HTML ja CSS</a> <br />
+    <small>December  2, 2012, category    <a href="http://erjjones.github.com/blog/html-ja-css#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/markdown">Markdown</a> <br />
+    <small>December  1, 2012, category  how-to  <a href="http://erjjones.github.com/blog/markdown#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/sea-ules-rails">Sea korda Railsi arenduskeskkond</a> <br />
+    <small>November 29, 2012, category  how-to  <a href="http://erjjones.github.com/blog/sea-ules-rails#disqus_thread"></a></small></li>	
+    </ul>		
+
+						<ul>	
+    <li><a href="/blog/Jekylli-paigaldamine">Staatiline blogi Jekylliga</a> <br />
+    <small>November 29, 2012, category  how-to  <a href="http://erjjones.github.com/blog/Jekylli-paigaldamine#disqus_thread"></a></small></li>	
+    </ul>		
+
+			</div>
+			
+			<div class="four columns">
+			</br>		
+			<hr />
+			<p>Tagid</p>
+				    		
+				        <span><a href="/tags/jekyll">jekyll</a>, </span>
+				    		
+				        <span><a href="/tags/sites">sites</a>, </span>
+				    		
+				        <span><a href="/tags/projects">projects</a>, </span>
+				    		
+				        <span><a href="/tags/Rails">Rails</a>, </span>
+				    		
+				        <span><a href="/tags/Development">Development</a>, </span>
+				    		
+				        <span><a href="/tags/Setup">Setup</a>, </span>
+				    		
+				        <span><a href="/tags/markdown">markdown</a>, </span>
+				    
+			</div>			
+	  		
+			<div class="clear"></div>
+			
+		</div> <!-- end container -->
+	</div> <!-- end about -->
+	
+		<div class="dotted-bar2">
+			<a href="#"><span class="top"></span></a>
+		</div>	
+	
+	<div class="testimonial">
+			<div class="container">
+				<div class="sixteen columns">
+					<p>Related posts
+					<ul>
+    					
+      					<li><span>02 Dec 2012</span> <a href="/blog/html-ja-css">HTML ja CSS</a></li>
+					    
+      					<li><span>01 Dec 2012</span> <a href="/blog/markdown">Markdown</a></li>
+					    
+      					<li><span>29 Nov 2012</span> <a href="/blog/Jekylli-paigaldamine">Staatiline blogi Jekylliga</a></li>
+					    
+					</ul>
+  					</p>
+				</div> <!-- end sixteen columns -->
+			</div> <!-- end container -->
+		</div> <!-- end testimonial -->
+
+			
+		<div class="copyright">
+			<p>&copy; 2012 All rights reserved</p>
+		</div> <!-- end copyright -->
+
+	
+	
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="../javascripts/smooth-scroll.js" type="text/javascript"></script>
+	<script src="../javascripts/smooth-scroll-ios.js" type="text/javascript"></script> 	
+<!-- End Document
+================================================== -->
+</body>
+</html>
