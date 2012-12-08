@@ -1,7 +1,7 @@
 ---
 layout : blog
-title : HTML ja CSS
-tags : [jekyll, sites, projects]
+title : HTML ja CSS dummy
+tags : [basics, html, css]
 description : basics of html and css
 comments : true
 lang : estonian

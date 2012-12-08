@@ -28,10 +28,42 @@ h3 {
   margin-top: 40px;
 }
 
-h3 a { text-decoration: none; 
+h3 a { 
+  text-decoration: none; 
 }
 
 .under { font-size: 12px; }
+
+.footnotes { 
+  background: url(../images/dotted-bg2.png) repeat;
+  padding: 20px; }
+
+ .footnotes p { font-size: 13px;
+  color: #585757; }  
+
+sup { font-size: 13px; 
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em; 
+ }
+
+.tag a { text-decoration: none; }
+
+.tag { 
+  text-transform: lowercase; 
+  font-size: 12px; 
+  padding: 4px 6px; 
+  margin-right: 5px; 
+  margin-bottom: 10px;
+}
+
+.tags { margin-top: 40px; }
+.tags img, .tags1 { margin-bottom: -15px; margin-left: -5px; }
+
+.twelve ul li { 
+  padding: 4px 0px 5px 21px;
+  background: url(../images/list-check.png) no-repeat 1px 11px;
+}
 
 /* #Code
 ================================================== */

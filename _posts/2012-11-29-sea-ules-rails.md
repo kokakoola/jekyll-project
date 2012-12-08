@@ -2,7 +2,7 @@
 layout : blog
 title : Sea korda Railsi arenduskeskkond
 category : how-to
-tags : [Rails, Development, Setup]
+tags : [rails, development, setup]
 description : Set up Rails Development Enviroment OSX 10.6.8
 comments : true
 lang : estonian

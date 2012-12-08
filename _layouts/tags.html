@@ -1,4 +1,4 @@
-{% include head.html %}
+{% include bloghead.html %}
 <body>
 
 {% include nav.html %}
@@ -7,32 +7,37 @@
 		<div class="container">
 		
 			<div class="sixteen columns">
-				<h2><img src="assets/images/star.png" alt="" /> {{ page.title }} <img src="assets/images/star.png" alt="" /></h2>
+				<h2><img src="../../assets/images/star.png" alt="" /> {{ page.title }} <img src="../../assets/images/star.png" alt="" /></h2>
 				
 			</div> <!-- end sixteen columns -->		
 			
 			<div class="twelve columns">
+
+				<p class="intro"> {{ page.excerpt }} </p>
 			
 				<p> {{ content }} </p>
 
-			</div> <!-- twelve columns -->
-			
-			{% include about.html %}			
+				<div class="tags">
+                    <i class="icon-tags"></i> {% for tag in page.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"><u>{{ tag }}</u></a>  {% if forloop.last != true %} {% endif %} {% endfor %}
+                 </div>
+			</div> <!-- twelve columns -->			
+
+			{% include blogabout.html %}			
 
 			<div class="four columns">		
 				<hr />
 				<h6>Tags</h6>
 				{% for tag in site.tags %}		
-				<span class="button tag"><a href="tags/{{ tag[0] }}">{{ tag[0] }}</a> </span>
+				<span class="button tag"><a href="../../tags/{{ tag[0] }}">{{ tag[0] }}</a> </span>
 				{% endfor %}
 			</div>	
 
 			<div class="four columns">
 				<hr />
 				<h6>Latest posts</h6>
-				{% for post in site.posts limit:30 %}
+				{% for post in site.posts limit:10 %}
 				<ul>	
-					<li><a href="{{ post.url }}">{{ post.title }}</a> <br /><small>{{ post.date | date: "%B %e, %Y" }}  </small></li>	
+					<li><a href="../../{{ post.url }}">{{ post.title }}</a> <br /><small>{{ post.date | date: "%B %e, %Y" }}  </small></li>	
 				</ul>		
 				{% endfor %}
 			</div>		
@@ -44,8 +49,7 @@
 	
 	<div class="dotted-bar2">
 		<a href="#"><span class="top"></span></a>
-	</div>
-
+	</div>	
 	
 	<!-- JS
 	================================================== -->
