@@ -2,7 +2,7 @@
 layout : blog
 title : Klaviatuur ja OSX shortcut
 category : basics
-tags : [ shorthands, shortcut, erik ]
+tags : [ shortcut, klaviatuur, erik ]
 description : klaviatuur
 comments : true
 lang : estonian

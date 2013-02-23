@@ -8,9 +8,13 @@ lang : estonian
 excerpt : Brauser loeb ainult htmli, javascripti ja cssi. Ainult ja ainult - kõik programmeerimiskeelte poolt kirjutatav kola tõlgitakse ekraanil esitamiseks htmli ning javascript on ainus scriptimiskeel mis on brausereisse sisse ehitatud ja seda pole vaja tõlkida. Seepärast on hea ka programmeerijana sellest poolest veidi aimu omada.
 ---
 
+Nt PHP (või ruby või python) peab veebiserveris jooksma, sest PHP ei ole HTML -- HTML läheb otse brauserisse töötlemata kujul, aga PHP "käivitub" ja käivitumise tulemusel saadud HTML läheb brauserisse. Html dokumendi saad oma arvutis avada selle lihtsalt brauseri ikoonile lohistades. Cmd+Tab-iga saad brauseri aknale liikuda ja Cmd+R on akna refreshimiseks.
+
 #### HTML: Hypertext Markup Language
 
-Pmst on see lihtsalt tekst, millele on lisatud tagid e. selektorid. Tagid on need nurksulgudega eraldatatud kokuleppelised lühendid, mille abil saab tekstiosadele anda eri funktsioone või tuua tekstiosasid välja kujundamise tarbeks css-is. Tag algab `< foo >` ja lõpeb `</ foo >`. Tagile saab panna külge selektoreid klassi või id kujul. id on kiirem, sest nagu nimigi ütleb, on see unikaalne: id-d saab ühe lehekülje ulatuses kasutada ühe korra. Class on selektor, mida saab mitmele tagile külge panna, brauser loeb seda aeglasemalt, sest peab kogu dokumendi läbi otsima. Süntaks on vastavalt `id="foo"` ja `class="foo"`. Hea tava ütleb, et funktsionaalselt erinevad lehe osad tuleb lahus hoida: nii ei segata omavahel javascripti, htmli cssi vaid lingitakse javascript ja css välise dokumendina htmli külge. Htmlis on vaid tekst, vormid, lingid ja selektorid väliste dokumentide jaoks.
+Pmst on see lihtsalt tekst, millele on lisatud tagid e. selektorid. Tagid on need nurksulgudega eraldatatud kokuleppelised lühendid, mille abil saab tekstiosadele anda eri funktsioone või tuua tekstiosasid välja kujundamise tarbeks css-is. Tag algab `< foo >` ja lõpeb `</ foo >`. Tagile saab panna külge selektoreid klassi või id kujul. id on kiirem, sest nagu nimigi ütleb, on see unikaalne: id-d saab ühe lehekülje ulatuses kasutada ühe korra. Class on selektor, mida saab mitmele tagile külge panna, brauser loeb seda aeglasemalt, sest peab kogu dokumendi läbi otsima. Süntaks on vastavalt `id="foo"` ja `class="foo"`. 
+
+Hea tava ütleb, et funktsionaalselt erinevad lehe osad tuleb lahus hoida: nii ei segata omavahel javascripti, htmli cssi vaid lingitakse javascript ja css välise dokumendina htmli külge. Htmlis on vaid tekst, vormid, lingid ja selektorid väliste dokumentide jaoks, javascript on eraldi failis lõpuga .js ja css eraldi failis lõpuga .css. Sa tõstad selle HTMLi sees oleva Javascripti eraldi .js faili, ja HTML failis paned tema asemele <script src="blabla.js"></script>
 
 HTML koosneb päisest `head` ja põhiosast `body`.   
 Päist ei kuvata ekraanile, see sisaldab brauserile tarvilikku informatsiooni: 
@@ -24,7 +28,7 @@ Põhiosa oli ennevanasti tabel, mille ruute sai erineva sisuga täita. Nagu Ecxe
 Tavalisematest html tagidest annab ülevaate [W3school](http://www.w3schools.com/)  
 Htmli kontrollitakse [W3C Markup Validation Service](http://validator.w3.org/) abil. Vigane html tekitab brauseriaknas ootamatuid tagajärgi ja mõjub halvasti otsimootorite rankingule.
 
-HTML5 on eraldi teema, aga asja lühike mõte on et puhas kastisüsteem, mis pärineb tabelist, tundub aja jooksul mõttetu olevat, html5 lähtub loogilisest lehe reaalsest ülesehitusest ja on sisse toonud lehe osadele vastavad tagid nagu aside jmt. See, et html5 võimaldab animatsioone teha, on teine teema.
+HTML5 on eraldi teema, aga asja lühike mõte on et puhas kastisüsteem, mis pärineb tabelist, tundub aja jooksul mõttetu olevat, html5 lähtub loogilisest lehe reaalsest ülesehitusest ja on sisse toonud lehe osadele vastavad tagid nagu aside jmt. See, et html5 võimaldab animatsioone teha, on teine teema. HTML5 mugav kiireferents asub [html5 doctori lehel](http://html5doctor.com/element-index/)
 
 #### CSS
 

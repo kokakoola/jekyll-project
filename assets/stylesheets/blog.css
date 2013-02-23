@@ -32,7 +32,7 @@ h3 a {
   text-decoration: none; 
 }
 
-.under { font-size: 12px; }
+#top { position: fixed; }
 
 .footnotes { 
   background: url(../images/dotted-bg2.png) repeat;
@@ -64,6 +64,8 @@ sup { font-size: 13px;
   padding: 4px 0px 5px 21px;
   background: url(../images/list-check.png) no-repeat 1px 11px;
 }
+
+.archive p { margin-bottom: 0px;}
 
 /* #Code
 ================================================== */
